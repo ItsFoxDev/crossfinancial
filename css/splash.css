@@ -1,0 +1,67 @@
+@keyframes splashcf{
+  from{
+    filter:blur(10px);
+    transform:translateY(50px);
+    scale:0;
+  }
+  to{
+    filter:blur(0px);
+    transform:translateY(0px);
+    scale:1;
+  }
+}
+@keyframes splashoc{
+  from{
+    filter:blur(5px);
+    scale:0;
+  }
+  to{
+    filter:blur(0px);
+    scale:1;
+  }
+}
+screen#splash{
+  display:flex;
+  width:100vw;
+  height:100vh;
+  align-content: center;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+#splashtext{
+  text-align:center;
+  width:100vw;
+  display:flex;
+  align-content: center;
+  justify-content: center;
+  animation:splashcf 1s ease-out;
+}
+#splashtext *{
+  color:white;
+  font-family:'Josefin Sans';
+  font-weight:900;
+  font-size:45px;
+}
+
+.spn{
+  white-space:nowrap;
+  display:flex;
+  align-content: center;
+  text-align:center;
+}
+.spn span{
+  animation:splashoc 3s ease-out;
+}
+@keyframes splashoc{
+  0%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  50%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  to{filter:blur(0px);scale:1;width:20px;}}
+
+.spn1{--splan:spl1;}
+.spn2{--splan:spl2;}
+.spn3{--splan:spl3;}
+.spn4{--splan:spl4;}
+.spn5{--splan:spl5;}
+.spn6{--splan:spl6;}
+.spn7{--splan:spl7;}
+.spn8{--splan:spl8;}
