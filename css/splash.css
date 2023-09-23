@@ -27,6 +27,8 @@ screen#splash{
   align-content: center;
   justify-content: center;
   flex-wrap:wrap;
+  flex-direction: column;
+  align-items:center;
 }
 #splashtext{
   text-align:center;
@@ -34,11 +36,9 @@ screen#splash{
   display:flex;
   align-content: center;
   justify-content: center;
-  animation:splashcf 1s ease-out;
+  animation:splashcf 0.5s ease-out;
 }
 #splashtext *{
-  color:white;
-  font-family:'Josefin Sans';
   font-weight:900;
   font-size:45px;
 }
@@ -50,12 +50,48 @@ screen#splash{
   text-align:center;
 }
 .spn span{
-  animation:splashoc 3s ease-out;
+  animation:var(--splan) 2s ease-out;
 }
-@keyframes splashoc{
+@keyframes spl1{
+  0%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  35%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  to{filter:blur(0px);scale:1;width:var(--sw);}}
+@keyframes spl2{
+  0%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  40%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  to{filter:blur(0px);scale:1;width:var(--sw);}}
+@keyframes spl3{
+  0%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  45%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  to{filter:blur(0px);scale:1;width:var(--sw);}}
+@keyframes spl4{
   0%{filter:blur(5px);scale:0;width:0px;opacity:0;}
   50%{filter:blur(5px);scale:0;width:0px;opacity:0;}
-  to{filter:blur(0px);scale:1;width:20px;}}
+  to{filter:blur(0px);scale:1;width:var(--sw);}}
+@keyframes spl5{
+  0%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  55%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  to{filter:blur(0px);scale:1;width:var(--sw);}}
+@keyframes spl6{
+  0%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  60%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  to{filter:blur(0px);scale:1;width:var(--sw);}}
+@keyframes spl7{
+  0%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  65%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  to{filter:blur(0px);scale:1;width:var(--sw);}}
+@keyframes spl8{
+  0%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  70%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  to{filter:blur(0px);scale:1;width:var(--sw);}}
+@keyframes spl9{
+  0%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  75%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  to{filter:blur(0px);scale:1;width:var(--sw);}}
+@keyframes spl10{
+  0%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  80%{filter:blur(5px);scale:0;width:0px;opacity:0;}
+  to{filter:blur(0px);scale:1;width:var(--sw);}}
 
 .spn1{--splan:spl1;}
 .spn2{--splan:spl2;}
@@ -65,3 +101,35 @@ screen#splash{
 .spn6{--splan:spl6;}
 .spn7{--splan:spl7;}
 .spn8{--splan:spl8;}
+.spn9{--splan:spl9;}
+.spn10{--splan:spl10;}
+
+@keyframes loadmsg{
+  0%{filter:blur(10px);transform:translateY(50px);scale:0;height:0px;}
+  90%{filter:blur(10px);transform:translateY(50px);scale:0;height:0px;}
+  to{filter:blur(0px);transform:translateY(0px);scale:1;height:20px;}}
+#loadmsg{
+  animation:loadmsg 3s ease-out;
+  height:20px;
+  font-size:20px;
+}
+
+@keyframes spinnerin{
+  0%{filter:blur(10px);scale:0;height:0px !important;}
+  90%{filter:blur(10px);scale:0;height:0px !important;}
+  to{filter:blur(0px);scale:1;height:45px;}
+}
+@keyframes spinners{
+  0%{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+#spinner{
+  font-size:45px;
+  animation:spinnerin 2.8s ease-out;
+  height:45px;
+  width:45px;
+  margin:10px 0px;
+}
+#spinner i{
+  animation: spinners 0.3s linear infinite;
+}

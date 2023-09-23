@@ -12,3 +12,14 @@ body{margin:0px;}
   scale:1.1;
   z-index:-10;
 }
+
+*{
+  color:white;
+  font-family:'Josefin Sans';
+}
+screen{
+  display:none !important;
+}
+screen.activescreen{
+  display:flex !important;
+}
